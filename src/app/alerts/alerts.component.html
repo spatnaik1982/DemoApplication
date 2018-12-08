@@ -1,0 +1,45 @@
+
+  <div class="content-container">
+      <div class="content-area">
+          <clr-datagrid>
+            <clr-dg-column>ID</clr-dg-column>
+            <clr-dg-column>Severity</clr-dg-column>
+            <clr-dg-column>Summary</clr-dg-column>
+            <clr-dg-column>Entity Name</clr-dg-column>
+            <clr-dg-column>Entity Type</clr-dg-column>
+        
+            <clr-dg-row *ngFor="let alert of alerts">
+                <clr-dg-cell>{{alert.id}}</clr-dg-cell>
+                <clr-dg-cell><clr-icon shape="info-circle" class="is-error" size="20"></clr-icon></clr-dg-cell>
+                <clr-dg-cell>{{alert.description}}</clr-dg-cell>
+                <clr-dg-cell>{{alert.entityName}}</clr-dg-cell>
+                <clr-dg-cell>{{alert.entityType}}</clr-dg-cell>
+            </clr-dg-row>
+        
+            <clr-dg-footer>{{ alerts.length }} alerts</clr-dg-footer>
+          </clr-datagrid>
+        </div>
+      <nav class="sidenav">
+          <section class="sidenav-content">
+              
+              <section class="nav-group collapsible">
+                  <input id="tabexample1" type="checkbox">
+                  <label for="tabexample1">Global</label>
+                  <ul class="nav-list">
+                      <li><a class="nav-link active">All Alerts</a></li>
+                  </ul>
+              </section>       
+              <section class="nav-group collapsible">
+                  <input id="tabexample1" type="checkbox">
+                  <label for="tabexample1">Custom</label>
+                  <ul class="nav-list">
+                      <li><a class="nav-link">Site A</a></li>
+                      <li><a class="nav-link">Site B</a></li>
+                  </ul>
+              </section>      
+          </section>
+        </nav>
+  </div>    
+  
+
+ 
